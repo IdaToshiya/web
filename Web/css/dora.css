@@ -1,0 +1,90 @@
+body {
+    background-image: url(img/ジャングル.png);
+    background-repeat: no-repeat;
+    width: 20%;
+    height: 30%;
+}
+
+.switch_image {
+    position: relative;
+    margin-top: 50%;
+    margin-left: 45%;
+    margin-bottom: 30%;
+    margin-right: 30%;
+}
+
+.switch_image img {
+    transition: opacity 0.5s;
+}
+.switch_image:hover img:first-of-type {
+    opacity: 0;
+}
+.switch_image img:last-of-type {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+}
+.switch_image:hover img:last-of-type {
+    opacity: 1;
+}
+
+/* 
+.container{
+    height: 300px;
+    width: 300px;
+    position: relative;
+}
+
+.image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    background-size: cover;
+    background-position: center center;
+    
+    animation: image-switch-animation 25s infinite;
+}
+
+.src1 {
+    background-image: url(ゴリラ.png);
+}
+.src2 {
+    background-image: url(ゴリラB.png);
+}
+.src3 {
+    background-image: url(ゴリラ.png);
+}
+.src4 {
+    background-image: url(ゴリラB.png);
+}
+.src5 {
+background-image: url(ゴリラ.png);
+}
+
+.image:nth-of-type(1) {
+    animation-delay: 0s;
+}
+.image:nth-of-type(2) {
+    animation-delay: 1s;
+}
+.image:nth-of-type(3) {
+    animation-delay: 2s;
+}
+.image:nth-of-type(4) {
+    animation-delay: 3s;
+}
+.image:nth-of-type(5) {
+    animation-delay: 4s;
+}
+
+@keyframes image-switch-animation {
+    0%{ opacity: 0;}
+    5%{ opacity: 1;}
+    25%{ opacity: 1;}
+    30%{ opacity: 0;}
+    100%{ opacity: 0;}
+} */

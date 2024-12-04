@@ -1,0 +1,934 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    font-size: 18px;
+    margin: 0;
+    font-family: "Kiwi Maru", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.side.main {
+    display: flex;
+}
+
+h1 {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    font-size: 50px;
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+ul {
+    font-family: "DotGothic16", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p span {
+    position: relative;
+    background: linear-gradient(transparent 40%, yellow 40%);
+}
+
+/* /* トップページ */
+.start {
+    background: #049ef1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9000;
+}
+
+.start p {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 9999;
+    width: 280px;
+}
+
+/****タイピングアニメーション****/
+.typing {
+    width: 100%;
+    animation: typing 2s steps(50), cursor .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid;
+    font-family: "Courier New", Monaco, monospace;
+    animation: typing 5s linear infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* 鳥アニメーション */
+.bird {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    animation: moving 8s linear infinite;
+}
+
+.bird.-type_2 {
+    animation-delay: 1s;
+}
+
+.bird.-type_2:before,
+.bird.-type_2:after {
+    animation-delay: -2s;
+}
+
+.bird.-type_3 {
+    animation-delay: 3s;
+}
+
+@keyframes moving {
+    0% {
+        top: 47vh;
+        left: -2vw;
+    }
+
+    25% {
+        top: 51vh;
+        left: 23vw
+    }
+
+    100% {
+        top: 47vh;
+        left: 101vw;
+    }
+}
+
+.bird:before,
+.bird:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    transform: rotate(-30deg);
+    transform-origin: right bottom;
+}
+
+.bird:before {
+    width: 100%;
+    height: 1px;
+    animation: leftWing 8s linear infinite;
+}
+
+.bird:after {
+    width: 1px;
+    height: 100%;
+    animation: rightWing 8s linear infinite;
+}
+
+@keyframes leftWing {
+    0% {
+        transform: rotate(-30deg);
+    }
+
+    2% {
+        transform: rotate(-110deg);
+    }
+
+    4% {
+        transform: rotate(-30deg);
+    }
+
+    6% {
+        transform: rotate(-110deg);
+    }
+
+    8% {
+        transform: rotate(-30deg);
+    }
+
+    10% {
+        transform: rotate(-110deg);
+    }
+
+    12% {
+        transform: rotate(-30deg);
+    }
+
+    30% {
+        transform: rotate(-30deg);
+    }
+
+    42% {
+        transform: rotate(-35deg);
+    }
+
+    72% {
+        transform: rotate(-35deg);
+    }
+
+    74% {
+        transform: rotate(10deg);
+    }
+
+    76% {
+        transform: rotate(-30deg);
+    }
+
+    78% {
+        transform: rotate(-110deg);
+    }
+
+    80% {
+        transform: rotate(-30deg);
+    }
+
+    82% {
+        transform: rotate(-110deg);
+    }
+
+    84% {
+        transform: rotate(-30deg);
+    }
+
+    86% {
+        transform: rotate(-110deg);
+    }
+
+    88% {
+        transform: rotate(-30deg);
+    }
+
+    90% {
+        transform: rotate(-110deg);
+    }
+
+    92% {
+        transform: rotate(-30deg);
+    }
+
+    94% {
+        transform: rotate(-110deg);
+    }
+
+    96% {
+        transform: rotate(-30deg);
+    }
+
+    98% {
+        transform: rotate(-110deg);
+    }
+
+    100% {
+        transform: rotate(-30deg);
+    }
+}
+
+@keyframes rightWing {
+    0% {
+        transform: rotate(30deg);
+    }
+
+    2% {
+        transform: rotate(110deg);
+    }
+
+    4% {
+        transform: rotate(30deg);
+    }
+
+    6% {
+        transform: rotate(110deg);
+    }
+
+    8% {
+        transform: rotate(30deg);
+    }
+
+    10% {
+        transform: rotate(110deg);
+    }
+
+    12% {
+        transform: rotate(30deg);
+    }
+
+    30% {
+        transform: rotate(30deg);
+    }
+
+    42% {
+        transform: rotate(35deg);
+    }
+
+    72% {
+        transform: rotate(35deg);
+    }
+
+    74% {
+        transform: rotate(0deg);
+    }
+
+    76% {
+        transform: rotate(30deg);
+    }
+
+    78% {
+        transform: rotate(110deg);
+    }
+
+    80% {
+        transform: rotate(30deg);
+    }
+
+    82% {
+        transform: rotate(110deg);
+    }
+
+    84% {
+        transform: rotate(30deg);
+    }
+
+    86% {
+        transform: rotate(110deg);
+    }
+
+    88% {
+        transform: rotate(30deg);
+    }
+
+    90% {
+        transform: rotate(110deg);
+    }
+
+    92% {
+        transform: rotate(30deg);
+    }
+
+    94% {
+        transform: rotate(110deg);
+    }
+
+    96% {
+        transform: rotate(30deg);
+    }
+
+    98% {
+        transform: rotate(110deg);
+    }
+
+    100% {
+        transform: rotate(30deg);
+    }
+}
+
+/* 鳥アニメーション終わり */
+
+/* お問合せ */
+
+.line-bc {
+    padding: 20px 10px;
+    max-width: 450px;
+    margin: 30px auto;
+    text-align: right;
+    font-size: 14px;
+    background: #7da4cd;
+
+}
+
+/*以下、②左側のコメント*/
+.balloon6 {
+    width: 100%;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.balloon6 .faceicon {
+    float: left;
+    margin-right: -50px;
+    width: 40px;
+}
+
+.balloon6 .faceicon img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.balloon6 .chatting {
+    width: 100%;
+    text-align: left;
+}
+
+.says {
+    display: inline-block;
+    position: relative;
+    margin: 0 0 0 50px;
+    padding: 10px;
+    max-width: 250px;
+    border-radius: 12px;
+    background: #edf1ee;
+}
+
+.says:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    left: -19px;
+    border: 8px solid transparent;
+    border-right: 18px solid #edf1ee;
+    -webkit-transform: rotate(35deg);
+    transform: rotate(35deg);
+}
+
+.says p {
+    margin: 0;
+    padding: 0;
+}
+
+/*以下、③右側の緑コメント*/
+.mycomment {
+    margin: 10px 0;
+}
+
+.mycomment p {
+    display: inline-block;
+    position: relative;
+    margin: 0 10px 0 0;
+    padding: 8px;
+    max-width: 250px;
+    border-radius: 12px;
+    background: #30e852;
+    font-size: 15px;
+}
+
+.mycomment p:after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: -19px;
+    border: 8px solid transparent;
+    border-left: 18px solid #30e852;
+    -webkit-transform: rotate(-35deg);
+    transform: rotate(-35deg);
+}
+
+
+.contact {
+    position: relative;
+    margin: 10% 10% 10% 10%;
+    padding: 15px;
+    background: #071aef;
+    border-radius: 30px;
+}
+
+.contact h1 {
+    text-align: center;
+}
+
+.contact:before {
+    content: "";
+    position: absolute;
+    left: -38px;
+    width: 13px;
+    height: 12px;
+    bottom: 0;
+    background: #071aef;
+    border-radius: 50%;
+}
+
+.contact:after {
+    content: "";
+    position: absolute;
+    left: -24px;
+    width: 20px;
+    height: 18px;
+    bottom: 3px;
+    background: #071aef;
+    border-radius: 50%;
+}
+
+.contact p {
+    margin: 0;
+    padding: 0;
+}
+
+/* お問合せ終わり */
+
+/* ハンバーガーメニューの作成 */
+.menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: #000000;
+}
+
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    background-color: aqua;
+}
+
+.menu-btn span:before {
+    bottom: 8px;
+}
+
+.menu-btn span:after {
+    top: 8px;
+}
+
+#menu-btn-check:checked~.menu-btn span {
+    background-color: rgba(255, 255, 255, 0);
+    /*メニューオープン時は真ん中の線を透明にする*/
+}
+
+#menu-btn-check:checked~.menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+#menu-btn-check:checked~.menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+#menu-btn-check {
+    display: none;
+}
+
+#menu-btn-check:checked~.menu-content {
+    left: 0;
+    /*メニューを画面内へ*/
+}
+
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    /*leftの値を変更してメニューを画面外へ*/
+    z-index: 80;
+    transition: all 3s;
+    /*アニメーション設定*/
+}
+
+.menu-content ul {
+    padding: 70px 10px 0;
+}
+
+.menu-content ul li {
+    border-bottom: solid 1px #0c0c0c;
+    list-style: none;
+}
+
+.menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: #000000;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+}
+
+.menu-content ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #000000;
+    border-right: solid 2px #000000;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+}
+
+/* ここまでハンバーガーメニュー */
+
+.header {
+    background-image: url(../img/壁紙.png);
+    background-size: cover;
+    width: 100%;
+    height: 430px;
+    color: rgb(68, 59, 7);
+    text-align: center;
+    padding: 100px 5px;
+    background-repeat: no-repeat;
+}
+
+.header a {
+    color: rgb(0, 141, 38);
+    border: solid 1px white;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 0 3px;
+    transition: all .5s;
+}
+
+.header a:hover {
+    background: white;
+    color: #2a5c84;
+}
+
+/* mainとsideを70/30でflex配置 */
+.sky {
+    display: flex;
+}
+
+.main {
+    padding: 10px 0 40px 0;
+    width: 70%;
+}
+
+.main h2 {
+    color: white;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.main img {
+    width: 100%;
+}
+
+.run img {
+    width: 10vb;
+}
+
+/* 目次とハンバーガーのフォント変更 */
+ul {
+    padding: 0;
+    position: relative;
+}
+
+ul li {
+    color: white;
+    background: #2da9af;
+    line-height: 1.5;
+    padding: 0.5em 0.5em 0.5em 2em;
+    border-bottom: 2px solid white;
+    list-style-type: none !important;
+    font-weight: bold;
+    /*好みで太字に*/
+}
+
+ul li:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f14a";
+    position: absolute;
+    left: 0.5em;
+    /*左端からのアイコンまでの距離*/
+    color: white;
+    /*アイコン色*/
+}
+
+/* ここまでフォント変更 */
+
+/* 目次の始まり */
+.mokuji {
+    background: white;
+    width: 250px;
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.mokuji h3 {
+    text-align: center;
+    margin: 0;
+}
+
+.mokuji ul {
+    margin: 10px 0;
+}
+
+.mokuji a {
+    transition: all .5s;
+}
+
+.mokuji a:hover {
+    color: orange;
+}
+
+/* ここまで目次 */
+
+.contents {
+    background: white;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.contents p {
+    padding-left: 5px;
+    border-left: solid 10px #2da9af;
+}
+
+.contents b {
+    color: orangered;
+}
+
+.contents ol {
+    margin: 10px 0;
+}
+
+.circle {
+    width: 20px;
+    margin: 40px auto;
+}
+
+.circle div {
+    background: white;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    border-radius: 100%;
+}
+
+.side {
+    width: 30%;
+}
+
+/* 隠し機能 */
+.btn {
+    position: relative;
+    width: 280px;
+    height: 150px;
+    margin: 50px auto;
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: block;
+    -webkit-transition: .4s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+
+.btn:hover img:nth-of-type(2) {
+    left: 0%;
+    opacity: 0;
+}
+
+.kakusihaikei {
+    background-image: url(img/石垣.png);
+}
+
+.btn2 {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn2 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: block;
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+    background-color: #2da9af;
+}
+
+.btn2:hover img:nth-of-type(2) {
+    top: 0%;
+    opacity: 0;
+}
+
+.btn3 {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn3 img {
+    position: absolute;
+    width: 200px;
+    height: 220px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: block;
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+}
+
+.btn3:hover img:nth-of-type(2) {
+    -webkit-transform: translate(-50%, -50%) scale(1.15) !important;
+    transform: translate(-50%, -50%) scale(1.15) !important;
+    opacity: 0;
+}
+
+/* ここまで隠し機能 */
+
+
+/* スライドショーの開始 */
+.slide-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.slide-wrapper {
+    display: flex;
+    flex-direction: column;
+    animation: slide-flow 2s infinite linear 1s both;
+}
+
+.slide {
+    width: 500px;
+    object-fit: cover;
+    border: 1px solid #3f3fc1;
+    background-image: url(img/雲.png);
+    border: 0;
+}
+
+@keyframes slide-flow {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+/* ここまでスライドショー */
+
+
+.bg {
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, rgb(0, 81, 255) 50%, rgb(0, 255, 115) 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: .5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+}
+
+.bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
+}
+
+.bg3 {
+    animation-duration: 5s;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(25%);
+    }
+}
+
+
+/* トップに戻るボタン */
+#pagetop {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    margin: 0;
+
+}
+
+#pagetop img {
+    position: relative;
+    display: flex;
+    width: 80px;
+    height: 80px;
+    justify-content: center;
+    transition: opacity .6s ease;
+    align-items: center;
+    text-decoration: none;
+    font-size: 32px;
+}
+
+#pagetop a:hover {
+    opacity: .3;
+}
+
+@media screen and (max-width:767px) {
+    #pagetop a {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* ここまでトップに戻るボタン */
+
+/* 走る忍者 */
+.animation-area {
+    margin-top: 1rem;
+    width: 100px;
+}

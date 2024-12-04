@@ -1,0 +1,51 @@
+.main {
+    background:#0bf0f0 url("https://th.bing.com/th/id/OIP.QQvppvmmXs2MjF79DYOfdAHaHb?w=190&h=191&c=7&r=0&o=5&pid=1.7")
+}
+
+.main_colour {
+    background: rgba(255,255,255,0.8);
+}
+
+.container {
+    display: grid;
+    gap: 10px;
+    border: solid 2px rgb(52, 108, 163);
+    justify-content: space-aroundz;
+}
+
+h1 {
+    background: dimgray;
+    color: white;
+    margin-top: 3rem;
+    padding: 3rem;
+    text-align: center;
+    font-size: xx-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+} 
+.show2 {
+    background: rgb(131, 134, 156);
+    color: #333;
+    display: flex;
+    width: 15rem;
+    font-size: x-large;
+}
+
+.gazou1 {
+    text-align:center;
+}
+
+.kajyou_zentai {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+}
+
+.link {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.span {
+    color: #46dc10;
+}
